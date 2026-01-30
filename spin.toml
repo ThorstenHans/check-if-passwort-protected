@@ -3,21 +3,21 @@
 spin_manifest_version = 2
 
 [application]
-name = "encryption-detector"
+name = "is-password-protected"
 version = "0.1.0"
-authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+authors = ["Thorsten Hans <thans@akamai.com>"]
 description = ""
 
 [[trigger.http]]
 route = "/..."
-component = "encryption-detector"
+component = "is-password-protected"
 
-[component.encryption-detector]
-source = "target/wasm32-wasip1/release/encryption_detector.wasm"
+[component.is-password-protected]
+source = "target/wasm32-wasip1/release/is_password_protected.wasm"
 files = ["assets/*"]
 
 allowed_outbound_hosts = []
 
-[component.encryption-detector.build]
+[component.is-password-protected.build]
 command = "cargo build --target wasm32-wasip1 --release"
 watch = ["src/**/*.rs", "Cargo.toml"]

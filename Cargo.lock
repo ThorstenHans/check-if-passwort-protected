@@ -263,17 +263,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "encryption-detector"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "byteorder",
- "lopdf",
- "serde_json",
- "spin-sdk",
-]
-
-[[package]]
 name = "equivalent"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -517,6 +506,17 @@ checksum = "879f10e63c20629ecabbb64a8010319738c66a5cd0c29b02d63d272b03751d01"
 dependencies = [
  "block-padding",
  "generic-array",
+]
+
+[[package]]
+name = "is-password-protected"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "byteorder",
+ "lopdf",
+ "serde_json",
+ "spin-sdk",
 ]
 
 [[package]]

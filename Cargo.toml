@@ -1,6 +1,6 @@
 [package]
-name = "encryption-detector"
-authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+name = "is-password-protected"
+authors = ["Thorsten Hans <thans@akamai.com>"]
 description = ""
 version = "0.1.0"
 rust-version = "1.78"

@@ -1,0 +1,23 @@
+#:schema https://schemas.spinframework.dev/spin/manifest-v2/latest.json
+
+spin_manifest_version = 2
+
+[application]
+name = "encryption-detector"
+version = "0.1.0"
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "encryption-detector"
+
+[component.encryption-detector]
+source = "target/wasm32-wasip1/release/encryption_detector.wasm"
+files = ["assets/*"]
+
+allowed_outbound_hosts = []
+
+[component.encryption-detector.build]
+command = "cargo build --target wasm32-wasip1 --release"
+watch = ["src/**/*.rs", "Cargo.toml"]
